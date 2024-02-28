@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="src/com/jar/jackson-annotations-2.3.2.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/jackson-core-2.3.2.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/jackson-databind-2.3.2.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/jackson-jaxrs-base-2.3.2.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/jackson-jaxrs-json-provider-2.3.2.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/jackson-module-jaxb-annotations-2.3.2.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/jersey-client-2.12.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/jersey-common-2.12.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/jersey-guava-2.12.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/jersey-media-json-jackson-2.11.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/javax.ws.rs-api-2.0.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/hk2-api-2.3.0-b10.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/hk2-locator-2.3.0-b10.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/hk2-utils-2.3.0-b10.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/javax.activation-1.2.0.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/javax.annotation-api-1.2.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/javax.inject-2.3.0-b10.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/aopalliance-repackaged-2.3.0-b10.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/jaxb-api-2.4.0-b180830.0359.jar"/>
+	<classpathentry kind="lib" path="src/com/jar/osgi-resource-locator-1.0.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

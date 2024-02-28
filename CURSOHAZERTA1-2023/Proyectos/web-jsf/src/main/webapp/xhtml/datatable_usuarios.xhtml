@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" lang="en">
+<h:head>
+	
+	<!-- CARGA DE RECURSOS ESTATICOS -->
+	
+	<h:outputStylesheet name="css/estilos_tabla.css" />
+</h:head>
+<h:body>
+
+	<!-- FORMULARIO DE PROPIEDADES DE TABLA -->
+	<h:form id="formu_porpiedades">
+		<h:panelGrid id="panel_propiedades" columns="2">
+			<h:outputText id="eti_numerofilas" value="Numero de filas:" />
+			<h:inputText id="numero_filas" size="3"
+				value="#{usuarios_bean.numero_filastabla}">
+				<f:ajax event="valueChange" execute="@this" render="@all" />
+			</h:inputText>
+		</h:panelGrid>
+	</h:form>
+
+	<!-- FORMULARIO CONTENEDOR DEL DATATABLE -->
+	<h:form id="formu_usuarios">
+		<h:dataTable id="tabla_usuarios"
+			value="#{usuarios_bean.lista_usuarios}" var="usuario"
+			first="#{usuarios_bean.primera_filapagina}"
+			rows="#{usuarios_bean.numero_filastabla}" styleClass="order-table"
+			headerClass="order-table-header" footerClass="order-table-footer"
+			rowClasses="order-table-odd-row,order-table-even-row" frame="border">
+			<h:column id="col_nombre">
+				<f:facet name="header">Nombre usuario</f:facet>
+				<h:outputText id="nombre_usuario" value="#{usuario.nombreUsuario}" />
+			</h:column>
+			<h:column id="col_clave">
+				<f:facet name="header">Clave</f:facet>
+				<h:outputText id="clave_usuario" value="#{usuario.password}" />
+			</h:column>
+			<h:column id="col_fechaalta">
+				<f:facet name="header">Fecha Alta</f:facet>
+				<h:outputText id="fecha_alta" value="#{usuario.fechaAlta}">
+					<f:convertDateTime type="date" pattern="dd/MMMM/yyyy" />
+				</h:outputText>
+			</h:column>
+			<h:column id="col_carpeta">
+				<f:facet name="header">Carpeta Documentacion</f:facet>
+				<f:facet name="footer">Total usuarios</f:facet>
+				<h:outputText id="carpeta_usuario"
+					value="#{usuario.carpetaDocumentacion}" />
+			</h:column>
+			<h:column id="col_idioma">
+				<f:facet name="header">Idioma seleccionado</f:facet>
+				<h:outputText id="idioma_usuario" value="#{usuario.idioma}" />
+				<f:facet name="footer">#{usuarios_bean.lista_usuarios.size()}</f:facet>
+			</h:column>
+		</h:dataTable>
+		<!-- OPCIONES DE BARRA DE NAVEGACION -->
+		<h:commandButton id="boton_paginacioninicio" value="primera pagina"
+			actionListener="#{usuarios_bean.paginainicio_Tabla}" />
+		<h:commandButton id="boton_paginacionmas" value="siguiente pagina"
+			actionListener="#{usuarios_bean.siguientepagina_Tabla}" />
+		<h:commandButton id="boton_paginacionmenos" value="pagina anterior"
+			actionListener="#{usuarios_bean.paginaanterior_Tabla}" />
+	</h:form>
+
+</h:body>
+</html>

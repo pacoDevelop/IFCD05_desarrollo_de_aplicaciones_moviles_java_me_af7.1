@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<omf:features xmlns:omf="http://xmlns.oracle.com/oepe/maf/features/1.0">
+   <feature featureReference="WeatherService">
+      <pluginReferences>
+         <core-cordova-plugin-references>
+            <plugin-reference id="CoreNetworkInformation"/>
+         </core-cordova-plugin-references>
+      </pluginReferences>
+   </feature>
+   <feature featureReference="Employees">
+      <pluginReferences>
+         <core-cordova-plugin-references>
+            <plugin-reference id="CoreCamera"/>
+            <plugin-reference id="CoreEmail"/>
+         </core-cordova-plugin-references>
+      </pluginReferences>
+   </feature>
+</omf:features>

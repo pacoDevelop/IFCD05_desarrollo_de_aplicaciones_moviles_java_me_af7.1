@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<adfmf_targets:Targets xmlns:adfmf_targets="oracle.eclipse.tools.adf.mobile/adfmf_targets" owner="Employee">
+  <target id="Android_Target_1" name="Android Target 1" stagingDir=".main.android">
+    <sdk href="adfmf_target://workspacePrefs/sdks#Android0"/>
+    <platform href="adfmf_target://workspacePrefs/sdks#android-21.0.0-Android0"/>
+    <mafRuntimeConfiguration version="2.1.0.2_1000_20150115-1352" name="MAF Runtime 2.1" id="oracle.eclipse.tools.adf.mobile.runtime-definition.2.1"/>
+  </target>
+</adfmf_targets:Targets>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<JavaBean version="1.3" id="ForecastResult_Operations" Package="wsdlstructure.Weather.GetCityForecastByZIP.GetCityForecastByZIPResult" BeanClass="wsdlstructure.Weather.GetCityForecastByZIP.GetCityForecastByZIPResult.ForecastResult_Operations" isJavaBased="false" xmlns="http://xmlns.oracle.com/adfm/beanmodel">
+   <BuiltinOperation id="First"/>
+   <BuiltinOperation id="Next"/>
+   <BuiltinOperation id="Previous"/>
+   <BuiltinOperation id="Last"/>
+</JavaBean>
