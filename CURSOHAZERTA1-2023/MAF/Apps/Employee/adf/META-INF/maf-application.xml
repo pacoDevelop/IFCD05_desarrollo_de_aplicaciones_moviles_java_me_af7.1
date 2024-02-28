@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<adfmf:application xmlns:adfmf="http://xmlns.oracle.com/adf/mf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" appControllerFolder="EmployeeApplication" id="employee.Employee" name="Employee" version="1.0">
+   <adfmf:featureReference id="Employees" refId="Employees"/>
+   <adfmf:featureReference id="Help" refId="Help"/>
+   <adfmf:featureReference id="WeatherService" refId="WeatherService"/>
+</adfmf:application>

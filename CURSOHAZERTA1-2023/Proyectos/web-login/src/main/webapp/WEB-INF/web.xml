@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>web-login</display-name>
+
+	<!-- ZONA DE SERVLET -->
+	<!-- ***** DEFINICION DEL CONTROLADOR FRONTAL DE LOGIN ***** -->
+	<servlet>
+		<description>Tratamiento de credenciales de entrada a la aplicacion</description>
+		<servlet-name>servlet-login</servlet-name>
+		<servlet-class>com.servlet.Servlet_Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>servlet-login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<!-- FIN ZONA DE SERVLET -->
+
+	<!-- ********** ZONA DE FILTROS ********** -->
+	<!-- PROCESOS DE INICIO DE APLICACION -->
+	<!-- FILTRO PARA ESTABLECER EL IDIOMA POR DEFECTO PARA CADA USUARIO -->
+	<filter>
+		<description>Proceso de establecimiento de idioma inicial del usuario</description>
+		<filter-name>filtro_idioma</filter-name>
+		<filter-class>com.filtros.Filtro_Idioma</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>filtro_idioma</filter-name>
+		<url-pattern>/index.jsp</url-pattern>
+	</filter-mapping>
+	<!-- ********** FIN ZONA DE FILTROS ********** -->
+
+	<!-- ** ZONA DE PARAMETROS INICIALES DE CONFIGURACION DE LA APLICACION ** -->
+	<!-- ESTABLECEMOS EL IDIOMA (es ESPAÑOL en INGLES fr FRANCES) -->
+	<context-param>
+		<description>establece el idioma inicial en caso de que el usuario trabaja con alguno 
+		del que no se posea traduccion</description>
+		<param-name>idioma_por_defecto</param-name>
+		<param-value>es</param-value>
+	</context-param>
+	<!-- ** FIN ZONA PARAMETROS INICIALES CONFIGURACION DE LA APLICACION ** -->
+
+
+	<!-- ***** MECANISMO DE ARRANQUE DE LA APLICACION ***** -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- *** CONFIGURACION DE PAGINAS JSP *** -->
+	<!-- OBLIGATORIO EN 8.5 DE TOMCAT -->
+	<jsp-config>
+		<!-- LOCALIZACION DE LOS TLD -->
+		<taglib>
+			<taglib-uri>http://com.atrium.jsg</taglib-uri>
+			<taglib-location>/tlds/mis_etiquetas.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+</web-app>

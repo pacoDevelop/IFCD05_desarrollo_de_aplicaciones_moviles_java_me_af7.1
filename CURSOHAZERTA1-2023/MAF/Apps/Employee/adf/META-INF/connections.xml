@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<References version="1.3" xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="Weather" className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl" xmlns="">
+      <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+      <RefAddresses>
+         <XmlRefAddr addrType="WebServiceConnection">
+            <Contents>
+               <wsconnection description="platform:/resource/EmployeeView/resource/weather.wsdl" service="{http://ws.cdyne.com/WeatherWS/}Weather">
+                  <model name="{http://ws.cdyne.com/WeatherWS/}Weather" xmlns="http://oracle.com/ws/model">
+                     <service name="{http://ws.cdyne.com/WeatherWS/}Weather">
+                        <port name="WeatherSoap" binding="{http://ws.cdyne.com/WeatherWS/}WeatherSoap">
+                           <soap addressUrl="http://wsf.cdyne.com/WeatherWS/Weather.asmx" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                           <operation name="GetWeatherInformation">
+                              <soap soapAction="http://ws.cdyne.com/WeatherWS/GetWeatherInformation" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                           <operation name="GetCityForecastByZIP">
+                              <soap soapAction="http://ws.cdyne.com/WeatherWS/GetCityForecastByZIP" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                           <operation name="GetCityWeatherByZIP">
+                              <soap soapAction="http://ws.cdyne.com/WeatherWS/GetCityWeatherByZIP" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                        </port>
+                        <port name="WeatherSoap12" binding="{http://ws.cdyne.com/WeatherWS/}WeatherSoap12">
+                           <soap addressUrl="http://wsf.cdyne.com/WeatherWS/Weather.asmx" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                           <operation name="GetWeatherInformation">
+                              <soap soapAction="http://ws.cdyne.com/WeatherWS/GetWeatherInformation" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                           <operation name="GetCityForecastByZIP">
+                              <soap soapAction="http://ws.cdyne.com/WeatherWS/GetCityForecastByZIP" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                           <operation name="GetCityWeatherByZIP">
+                              <soap soapAction="http://ws.cdyne.com/WeatherWS/GetCityWeatherByZIP" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                        </port>
+                        <port name="WeatherHttpGet" binding="{http://ws.cdyne.com/WeatherWS/}WeatherHttpGet">
+                           <operation name="GetWeatherInformation">
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                           <operation name="GetCityForecastByZIP">
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                           <operation name="GetCityWeatherByZIP">
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                        </port>
+                        <port name="WeatherHttpPost" binding="{http://ws.cdyne.com/WeatherWS/}WeatherHttpPost">
+                           <operation name="GetWeatherInformation">
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                           <operation name="GetCityForecastByZIP">
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                           <operation name="GetCityWeatherByZIP">
+                              <input name=""/>
+                              <output name=""/>
+                           </operation>
+                        </port>
+                     </service>
+                  </model>
+               </wsconnection>
+            </Contents>
+         </XmlRefAddr>
+      </RefAddresses>
+   </Reference>
+</References>

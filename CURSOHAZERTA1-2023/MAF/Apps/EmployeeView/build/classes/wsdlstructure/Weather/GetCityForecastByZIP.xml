@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<JavaBean version="1.3" id="GetCityForecastByZIP" Package="wsdlstructure.Weather" BeanClass="wsdlstructure.Weather.GetCityForecastByZIP" isJavaBased="false" xmlns="http://xmlns.oracle.com/adfm/beanmodel">
+   <AccessorAttribute id="GetCityForecastByZIPResult" IsCollection="false" BeanClass="wsdlstructure.Weather.GetCityForecastByZIP.GetCityForecastByZIPResult"/>
+</JavaBean>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+	xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+	<amx:panelPage id="pp1">
+		<amx:facet name="header">
+			<amx:outputText value="Get Weather" id="ot1" />
+		</amx:facet>
+		<amx:facet name="primary">
+			<amx:commandButton id="cb1" action="__back" />
+		</amx:facet>
+		<amx:facet name="secondary">
+			<amx:commandButton id="cb2" />
+		</amx:facet>
+		<!--Parameter Form bound to Weather.GetCityWeatherByZIP(String) -->
+		<amx:panelFormLayout id="p1">
+			<amx:inputText label="#{bindings.ZIP.hints.label}"
+				value="#{bindings.ZIP.inputValue}" id="i1">
+			</amx:inputText>
+		</amx:panelFormLayout>
+		<amx:commandButton
+			actionListener="#{bindings.GetCityWeatherByZIP.execute}"
+			text="GetCityWeatherByZIP"
+			disabled="#{!bindings.GetCityWeatherByZIP.enabled}" id="c1">
+			<amx:setPropertyListener to="#{viewScope.displayResult}" id="s1"
+				from="#{'Y'}" />
+		</amx:commandButton>
+		<!--Form bound to Weather.GetCityWeatherByZIP(String).GetCityWeatherByZIP.GetCityWeatherByZIPResult -->
+		<amx:panelFormLayout id="p2" rendered="#{viewScope.displayResult == 'Y'}">
+			<amx:inputText label="#{bindings.City.hints.label}"
+				value="#{bindings.City.inputValue}" id="i2">
+			</amx:inputText>
+			<amx:inputText label="#{bindings.Temperature.hints.label}"
+				value="#{bindings.Temperature.inputValue}" id="i3">
+			</amx:inputText>
+			<amx:inputText label="#{bindings.RelativeHumidity.hints.label}"
+				value="#{bindings.RelativeHumidity.inputValue}" id="i4">
+			</amx:inputText>
+			<amx:inputText label="#{bindings.Wind.hints.label}"
+				value="#{bindings.Wind.inputValue}" id="i5">
+			</amx:inputText>
+		</amx:panelFormLayout>
+	</amx:panelPage>
+</amx:view>

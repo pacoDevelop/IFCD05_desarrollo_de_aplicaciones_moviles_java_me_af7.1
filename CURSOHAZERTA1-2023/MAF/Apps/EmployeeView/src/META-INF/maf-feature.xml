@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<adfmf:features xmlns:adfmf="http://xmlns.oracle.com/adf/mf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <adfmf:feature id="Employees" name="Employees">
+      <adfmf:content id="Employees.1">
+         <adfmf:amx file="emp-task-flow-definition.xml#emp-task-flow-definition"/>
+      </adfmf:content>
+   </adfmf:feature>
+   <adfmf:feature id="Help" name="Help">
+      <adfmf:content id="Help.1">
+         <adfmf:localHTML url="help.html"/>
+      </adfmf:content>
+   </adfmf:feature>
+   <adfmf:feature id="WeatherService" name="WeatherService">
+      <adfmf:content id="WeatherService.1">
+         <adfmf:amx file="GetWeather.amx"/>
+      </adfmf:content>
+   </adfmf:feature>
+</adfmf:features>

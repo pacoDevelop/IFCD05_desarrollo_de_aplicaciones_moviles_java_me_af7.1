@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/adf/controller http://xmlns.oracle.com/adf/controller/adfc-mobile-config.xsd">
+    <task-flow-definition id="emp-task-flow-definition">
+        <default-activity>employeeList</default-activity>
+        <managed-bean>
+            <managed-bean-name>emailBean</managed-bean-name>
+            <managed-bean-class>model.emailBean</managed-bean-class>
+            <managed-bean-scope>view</managed-bean-scope>
+        </managed-bean>
+        <view id="employeeList">
+            <page>/employeeList.amx</page>
+        </view>
+        <view id="graph">
+            <page>/graph.amx</page>
+        </view>
+        <view id="picture">
+            <page>/picture.amx</page>
+        </view>
+        <control-flow-rule>
+            <from-activity-id>employeeList</from-activity-id>
+            <control-flow-case>
+                <from-outcome>showGraph</from-outcome>
+                <to-activity-id>graph</to-activity-id>
+            </control-flow-case>
+            <control-flow-case>
+                <from-outcome>takePicture</from-outcome>
+                <to-activity-id>picture</to-activity-id>
+            </control-flow-case>
+        </control-flow-rule>
+    </task-flow-definition>
+</adfc-mobile-config>

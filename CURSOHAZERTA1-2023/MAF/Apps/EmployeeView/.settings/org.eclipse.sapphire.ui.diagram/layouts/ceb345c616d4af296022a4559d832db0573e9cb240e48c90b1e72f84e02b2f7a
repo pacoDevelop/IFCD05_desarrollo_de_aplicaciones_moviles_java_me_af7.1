@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram-geometry>
+    <node>
+        <id>view#employeeList#0</id>
+        <bounds x="123" y="125"/>
+    </node>
+    <node>
+        <id>view#graph#1</id>
+        <bounds x="501" y="128"/>
+    </node>
+    <node>
+        <id>view#picture#2</id>
+        <bounds x="125" y="381"/>
+    </node>
+</diagram-geometry>
