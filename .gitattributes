@@ -1,7 +1,7 @@
 
 *.java linguist-language=Java
-*.doc linguist-language=Doc
-*.zip linguist-language=Zip
 *.jsp linguist-language=Jsp
 *.html linguist-language=Html
 *.css linguist-language=Css
+*.doc linguist-language=
+*.zip linguist-language=
