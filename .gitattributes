@@ -1,5 +1,7 @@
-* linguist-language=Java
 
 *.java linguist-language=Java
 *.doc linguist-language= 
 *.zip linguist-language= 
+*.jsp linguist-language=JSP 
+*.html linguist-language=HTML
+*.css linguist-language=CSS
